@@ -7,13 +7,12 @@
 html {
   position: relative;
   min-height: 100%;
-  
+
 }
 
 body {
   /* Padding bottom by footer height */
   padding-bottom: 80px;
-  color: red;
 }
 
 #footer {
