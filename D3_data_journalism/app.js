@@ -1,7 +1,7 @@
 // @TODO: YOUR CODE HERE!
 // Define SVG area dimensions
-var svgWidth = 825;
-var svgHeight = 600;
+var svgWidth = 850;
+var svgHeight = 700;
 
 // Define the chart's margins as an object
 var margin = {
@@ -45,7 +45,7 @@ d3.csv("data.csv", function(d) {
       .range([0, chartWidth]);
 
     var yLinearScale = d3.scaleLinear()
-      .domain([6, d3.max(csvData, d => d.smokes)], 1).nice()
+      .domain([9, d3.max(csvData, d => d.smokes)], 1).nice()
       .range([chartHeight, 0]);
 
     // Create axis functions
@@ -58,7 +58,7 @@ d3.csv("data.csv", function(d) {
       .call(bottomAxis);
 
     chartGroup.append("g")
-      .call(leftAxis);
+      .call(leftAxis.ticks(20));
 
 
     // Create Circles
