@@ -120,7 +120,6 @@ d3.csv("data.csv", function(d) {
         toolTip.hide(data);
       });
 
-
     // Create axes labels
     chartGroup.append("text")
       .attr("transform", "rotate(-90)")
@@ -133,7 +132,7 @@ d3.csv("data.csv", function(d) {
     chartGroup.append("text")
       .attr("transform", `translate(${chartWidth / 2}, ${chartHeight + margin.top - 50})`)
       .attr("class", "axisText")
-      .text("Age");
+      .text("Median Age");
   }).catch(function(error) {
     console.log(error);
   });
